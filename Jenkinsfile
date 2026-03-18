@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com'
-            }
-        }
         stage('Deploy to Web1') {
             steps {
                 sshagent(['web-server-key']) {
