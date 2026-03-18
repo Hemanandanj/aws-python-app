@@ -23,9 +23,9 @@ def submit():
 
     try:
         connection = pymysql.connect(**db_config)
-        with connection.cursor() ass cursor:
+        with connection.cursor() as cursor:
             sql = "INSERT INTO users (name, age) VALUES (%s, %s)"
-            curson.execute(sql, (name,age))
+            cursor.execute(sql, (name,age))
         connection.commit()
         connection.close()
         return f"<h1>Success!</h1><p>Registered {name}, age {age}.</p><a href='/'>Go Back</a>"
