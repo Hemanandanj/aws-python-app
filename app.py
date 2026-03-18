@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pymysql
 
-app - Flask(__name__)
+app = Flask(__name__)
 
 db_config = {
     'host': '172.31.19.240',
